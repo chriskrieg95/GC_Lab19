@@ -52,6 +52,9 @@ public class MyLinkedList implements MyList {
 
 	@Override
 	public void removeFromEnd() {
+		if (myLength < 2) {
+			removeFromBeginning();
+		}
 		//set the second to last node to null (myLength-2)
 		getNodeAt(myLength-2).setNext(null);
 		
